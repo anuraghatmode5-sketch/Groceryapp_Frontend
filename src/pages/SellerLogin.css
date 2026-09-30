@@ -1,0 +1,198 @@
+/* ================= SELLER LOGIN PAGE ================= */
+
+.seller-login-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* ================= BACKGROUND OVERLAY ================= */
+
+.seller-login-page::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ================= LOGIN CARD ================= */
+
+.seller-login-card {
+    width: 380px;
+
+    padding: 35px 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 1;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= HEADING ================= */
+
+.seller-login-card h1 {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #333;
+}
+
+.seller-login-card h1 span {
+    color: #29a866;
+}
+
+
+/* ================= INPUT GROUP ================= */
+
+.seller-input-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.seller-input-group label {
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #333;
+}
+
+
+/* ================= INPUT ================= */
+
+.seller-input-group input {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    box-sizing: border-box;
+}
+
+.seller-input-group input:focus {
+    border-color: #29a866;
+}
+
+
+/* ================= LOGIN BUTTON ================= */
+
+.seller-login-button {
+    width: 100%;
+    height: 40px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #29a866;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.seller-login-button:hover {
+    background-color: #239457;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .seller-login-page {
+        padding: 20px;
+    }
+
+    .seller-login-card {
+        width: 100%;
+        max-width: 380px;
+
+        padding: 30px 25px;
+    }
+}
+
+
+
+
+
+/* ================= LOADING SPINNER ================= */
+
+.seller-login-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.loading-spinner {
+    width: 16px !important;
+    height: 16px !important;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-top: 2px solid white;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    animation: seller-login-spinner 0.7s linear infinite;
+}
+
+
+@keyframes seller-login-spinner {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}

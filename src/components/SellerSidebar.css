@@ -1,0 +1,86 @@
+/* ================= SELLER SIDEBAR ================= */
+
+.seller-sidebar {
+    width: 210px;
+    min-height: calc(100vh - 65px);
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #e5e5e5;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= SIDEBAR ITEM ================= */
+
+.seller-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    height: 58px;
+    padding: 0 15px;
+
+    cursor: pointer;
+
+    color: #333;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= ICON ================= */
+
+.sidebar-icon {
+    width: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+}
+
+
+/* ================= ACTIVE ITEM ================= */
+
+.seller-sidebar-item.active {
+    background-color: #e9f8f1;
+
+    color: #29a866;
+
+    border-right: 4px solid #29a866;
+}
+
+
+/* ================= HOVER ================= */
+
+.seller-sidebar-item:not(.active):hover {
+    background-color: #f5f5f5;
+}
+
+
+/* ================= SIDEBAR TEXT ================= */
+
+.seller-sidebar-item p {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .seller-sidebar {
+        width: 180px;
+    }
+
+    .seller-sidebar-item {
+        font-size: 13px;
+        padding: 0 12px;
+    }
+}

@@ -1,0 +1,48 @@
+/* ================= SELLER DASHBOARD ================= */
+
+.seller-dashboard {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #ffffff;
+}
+
+
+/* ================= DASHBOARD BODY ================= */
+
+.seller-dashboard-body {
+    display: flex;
+
+    width: 100%;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.seller-main-content {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 30px 34px;
+
+    background-color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .seller-dashboard-body {
+        flex-direction: column;
+    }
+
+    .seller-main-content {
+        padding: 25px 20px;
+    }
+
+}

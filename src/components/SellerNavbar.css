@@ -1,0 +1,156 @@
+/* ================= SELLER NAVBAR ================= */
+
+.seller-navbar {
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= LOGO ================= */
+
+.seller-navbar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #29a866;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.seller-navbar-logo img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+}
+
+
+/* ================= RIGHT SIDE ================= */
+
+.seller-navbar-right {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* ================= ADMIN TEXT ================= */
+
+.seller-admin-text {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* ================= LOGOUT BUTTON ================= */
+
+.seller-logout-button {
+    padding: 7px 18px;
+
+    border: 1px solid #999;
+    border-radius: 18px;
+
+    background-color: white;
+
+    color: #333;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.seller-logout-button:hover {
+    background-color: #29a866;
+    color: white;
+    border-color: #29a866;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .seller-navbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .seller-navbar-logo {
+        font-size: 17px;
+    }
+
+    .seller-navbar-logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .seller-navbar-right {
+        gap: 10px;
+    }
+
+    .seller-admin-text {
+        font-size: 12px;
+    }
+
+    .seller-logout-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* ================= LOGOUT BUTTON ================= */
+
+.seller-logout-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* ================= LOADING SPINNER ================= */
+
+.loading-spinner {
+
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-top: 2px solid white;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    animation: seller-logout-spinner 0.7s linear infinite;
+}
+
+
+@keyframes seller-logout-spinner {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}

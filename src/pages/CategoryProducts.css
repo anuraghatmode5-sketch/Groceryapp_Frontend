@@ -1,0 +1,640 @@
+/* =========================================================
+   CATEGORY PRODUCTS PAGE
+========================================================= */
+
+.category-products-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   PRODUCTS CONTAINER
+========================================================= */
+
+.category-products-container {
+    width: 87%;
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.category-products-title {
+    font-size: 22px;
+    font-weight: 600;
+
+    margin: 0 0 18px;
+
+    color: #30343b;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
+
+.category-products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(150px, 1fr));
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.category-product-card {
+    width: 150px;
+
+    min-height: 165px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.category-product-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.category-product-image {
+    width: 100%;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 5px;
+}
+
+
+.category-product-image img {
+    width: 100%;
+
+    height: 90px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category-product-category {
+    margin: 3px 0 3px;
+
+    font-size: 10px;
+
+    color: #888888;
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+========================================================= */
+
+.category-product-name {
+    margin: 0 0 8px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: #333333;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.category-product-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.category-product-price {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    white-space: nowrap;
+}
+
+
+.category-offer-price {
+    color: #43b77a;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.category-original-price {
+    color: #999999;
+
+    font-size: 10px;
+
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.category-add-button {
+    width: auto;
+
+    min-width: 52px;
+
+    padding: 5px 8px;
+
+    border: 1px solid #9edfc1;
+
+    border-radius: 3px;
+
+    background: #eefaf5;
+
+    color: #43b77a;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: all 0.2s ease;
+}
+
+
+.category-add-button:hover {
+    background: #43b77a;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   OUT OF STOCK
+========================================================= */
+
+.category-out-stock-button {
+    width: auto;
+
+    min-width: 52px;
+
+    padding: 5px 7px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 3px;
+
+    background: #f4f4f4;
+
+    color: #999999;
+
+    font-size: 9px;
+
+    cursor: not-allowed;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.category-products-loading {
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #777777;
+}
+
+
+.category-loading-spinner {
+    width: 30px;
+
+    height: 30px;
+
+    border: 3px solid #e5e5e5;
+
+    border-top-color: #43b77a;
+
+    border-radius: 50%;
+
+    animation:
+        category-product-spin
+        0.8s
+        linear
+        infinite;
+}
+
+
+@keyframes category-product-spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+========================================================= */
+
+.category-no-products {
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #777777;
+}
+
+
+.category-no-products h2 {
+    margin-bottom: 8px;
+
+    color: #444444;
+}
+
+
+.category-no-products p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.category-footer {
+    width: 100%;
+
+    margin-top: 20px;
+
+    background-color: #eefaf4;
+
+    color: #333333;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.category-footer-content {
+    width: 87%;
+
+    margin: 0 auto;
+
+    padding: 32px 0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.category-footer-brand {
+    max-width: 320px;
+}
+
+
+.category-footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #43b77a;
+}
+
+
+.category-footer-brand p {
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #666666;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.category-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.category-footer-column h3 {
+    margin: 0 0 5px;
+
+    font-size: 14px;
+
+    color: #222222;
+}
+
+
+.category-footer-column a {
+    text-decoration: none;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+
+.category-footer-column a:hover {
+    color: #43b77a;
+}
+
+
+.category-footer-column p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.category-footer-bottom {
+    width: 87%;
+
+    margin: 0 auto;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #d5e8dd;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.category-footer-bottom p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+.category-footer-bottom-links {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.category-footer-bottom-links a {
+    text-decoration: none;
+
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+.category-footer-bottom-links a:hover {
+    color: #43b77a;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .category-products-container {
+        width: 90%;
+    }
+
+
+    .category-products-grid {
+        grid-template-columns:
+            repeat(auto-fill, minmax(150px, 1fr));
+
+        gap: 25px;
+    }
+
+
+    .category-footer-content {
+        width: 90%;
+
+        grid-template-columns:
+            2fr 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .category-products-container {
+        width: 90%;
+
+        padding: 30px 0 45px;
+    }
+
+
+    .category-products-title {
+        font-size: 19px;
+    }
+
+
+    .category-products-grid {
+        grid-template-columns:
+            repeat(2, 150px);
+
+        justify-content: space-between;
+
+        gap: 20px;
+    }
+
+
+    .category-product-card {
+        width: 150px;
+    }
+
+
+    .category-footer-content {
+        width: 90%;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 30px;
+    }
+
+
+    .category-footer-brand {
+        grid-column: 1 / -1;
+
+        max-width: 100%;
+    }
+
+
+    .category-footer-bottom {
+        width: 90%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .category-products-grid {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+    }
+
+
+    .category-footer-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    .category-footer-brand {
+        grid-column: auto;
+    }
+
+
+    .category-footer-bottom-links {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
